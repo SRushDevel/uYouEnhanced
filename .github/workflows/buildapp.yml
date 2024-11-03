@@ -148,10 +148,8 @@ jobs:
           UYOU_VERSION: ${{ inputs.uyou_version }}
           BUNDLE_ID: ${{ inputs.bundle_id }}
           APP_NAME: ${{ inputs.app_name }}
-          CFLAGS: "-Wno-module-import-in-extern-c"
-          CXXFLAGS: "-Wno-module-import-in-extern-c"
-          CFLAGS: "-Wno-error"
-          CXXFLAGS: "-Wno-error"
+          CFLAGS: "-Wno-module-import-in-extern-c -Wno-error"
+          CXXFLAGS: "-Wno-module-import-in-extern-c -Wno-error"
   
       - name: Upload Artifact
         if: ${{ inputs.upload_artifact }}
