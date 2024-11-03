@@ -148,7 +148,9 @@ jobs:
           UYOU_VERSION: ${{ inputs.uyou_version }}
           BUNDLE_ID: ${{ inputs.bundle_id }}
           APP_NAME: ${{ inputs.app_name }}
-
+          CFLAGS: "-Wno-module-import-in-extern-c"
+          CXXFLAGS: "-Wno-module-import-in-extern-c"
+  
       - name: Upload Artifact
         if: ${{ inputs.upload_artifact }}
         uses: actions/upload-artifact@v4.4.3
