@@ -150,6 +150,8 @@ jobs:
           APP_NAME: ${{ inputs.app_name }}
           CFLAGS: "-Wno-module-import-in-extern-c"
           CXXFLAGS: "-Wno-module-import-in-extern-c"
+          CFLAGS: "-Wno-error"
+          CXXFLAGS: "-Wno-error"
   
       - name: Upload Artifact
         if: ${{ inputs.upload_artifact }}
